@@ -1,0 +1,123 @@
+Here's the updated English translation with the company name changed to **Contoso** and the content updated based on the image:
+
+════════════════════════════════════════════════════════════════
+**MEETING MINUTES — Conversational AI System Requirements Discussion**
+"Contoso HR Chat" | Contoso, Human Resources Department
+════════════════════════════════════════════════════════════════
+
+**Date:** May 14, 2025
+**Time:** 10:00 – 11:30
+**Location:** Meeting Room 201 / Microsoft Teams
+**Recorded by:** Napatsorn Techawat
+
+**Attendees**
+───────────────────────────────────────────────────────────────
+- Somchai Wongpitak — HR Department Manager (Chair)
+- Napatsorn Techawat — Senior HR Officer
+- Thanapol Rungroj — System Developer (IT)
+- Pimchanok Suksawat — IT Officer / System Administrator
+
+════════════════════════════════════════════════════════════════
+
+**Background and Objectives**
+───────────────────────────────────────────────────────────────
+Per the request of the Chief Innovation Officer, Contoso's HR Department aims to deploy **Conversational AI for Candidate Engagement** — using Foundry AI agents to answer applicant FAQs (job openings fitting, application status, interview scheduling, policy clarifications).
+
+**Expected benefits:** Improves candidate experience, reduces repetitive recruiter workload, and ensures 24/7 support.
+
+The objective of this meeting is to define preliminary requirements for development as a Proof of Concept (PoC) before launching for actual use in the future.
+
+════════════════════════════════════════════════════════════════
+**Summary of Key Points**
+════════════════════════════════════════════════════════════════
+
+**1. System Name and Goals**
+───────────────────────────────────────────────────────────────
+The meeting agreed to name the Chatbot "Contoso HR Chat" as it is short, easy to remember, and clearly conveys its association with Contoso.
+
+The main goal of this first Phase is to test usage within the HR/recruiting team only, not yet open to external candidates. The priority is to get the system working first, then expand the scope to applicant-facing use in later stages.
+
+**2. User Group and System Size**
+───────────────────────────────────────────────────────────────
+This Phase will have only 1–2 users, who are HR team officers acting as test recruiters. The meeting agreed that there is no need to design for large-scale support at this stage. Focus should be on content accuracy and ease of testing first, before scaling to handle 24/7 candidate traffic.
+
+**3. Tech Stack and Deployment**
+───────────────────────────────────────────────────────────────
+The IT team stated that they are most proficient in JavaScript, and for this PoC, building with just a single JavaScript service is sufficient. There is no need to separate Frontend/Backend into something complex.
+
+For deployment, the meeting agreed to run locally on team machines for now — no need to deploy to the Cloud at this stage.
+
+**4. Chat History**
+───────────────────────────────────────────────────────────────
+The meeting discussed conversation memory. HR officers want the Bot to be able to continue conversations with candidates to some extent (e.g., follow-up questions about an application), not always respond in a One-shot manner.
+
+**Final agreement:** Remember the last 5 chat turns only (5 Turns), using a simple Sliding Window. No long-term memory system or database for conversation history is required.
+
+**5. Knowledge Base and HR Documents**
+───────────────────────────────────────────────────────────────
+The Bot will answer questions based on Contoso's recruiting and HR materials, including current job openings, application process steps, interview scheduling policies, and general HR policy clarifications.
+
+For this Phase, start with only 5 pages of documents to make testing quick and keep the scope manageable. More content will be added later.
+
+**6. Knowledge Management — No Vector Database Required**
+───────────────────────────────────────────────────────────────
+Thanapol asked whether a Vector Database such as Pinecone or Azure AI Search is necessary. Pimchanok clarified that it is not necessary for this size.
+
+**Agreement:** Use the File Search Tool already available in Azure AI Foundry. Simply upload the files and they can be used immediately, greatly reducing infrastructure complexity.
+
+**7. UI Design — Theme and Style**
+───────────────────────────────────────────────────────────────
+The meeting agreed that the "Contoso HR Chat" theme will use blue and white colors, with a clean and simple design, not cluttered, appropriate for Contoso's corporate brand.
+
+**8. Language and Response Style**
+───────────────────────────────────────────────────────────────
+The Bot will respond in Thai, but not 100% formal. It should have a friendly tone so that candidates feel comfortable asking questions and do not feel like they are talking to a cold system.
+
+**9. Disclaimer**
+───────────────────────────────────────────────────────────────
+Napatsorn proposed displaying a clear Disclaimer on the UI that AI may give incorrect responses, so that candidates still verify information with actual recruiters.
+
+**Agreed disclaimer text:**
+*"Information from AI may be inaccurate. Please verify directly with the Contoso HR department."*
+This will be displayed permanently at the bottom of the Chat page.
+
+**10. Azure Authentication — API Key Only**
+───────────────────────────────────────────────────────────────
+Pimchanok raised the issue of authenticating with Azure AI Foundry, as there are two main options:
+
+- (a) Microsoft Entra ID (DefaultAzureCredential / az login)
+- (b) API Key via FOUNDRY_API_KEY in .env
+
+The meeting made a clear resolution: **Use API Key (option b) only** for this Workshop, for the following main reasons:
+
+- **Limited preparation time** — Setting up Entra ID requires Tenant Admin-level permissions and a Consent process that takes time. This is not suitable for a Workshop context that needs to start immediately.
+- **Workshop participants may not have az CLI or may not be logged in.** Distributing an API Key allows everyone to start right away without additional installation.
+- **For a small PoC running locally with only 1–2 users**, the security risk is at an acceptable level.
+
+**Agreement:** All Examples and Applications in this project will authenticate using an API Key via the `api-key` header only. Use of DefaultAzureCredential or any Token-based Auth is prohibited, so that all participants can run the project immediately without issues.
+
+════════════════════════════════════════════════════════════════
+**Summary of Agreed Requirements**
+════════════════════════════════════════════════════════════════
+
+| Item | Specification |
+|---|---|
+| System Name | Contoso HR Chat |
+| Purpose | Conversational AI for Candidate Engagement — answering applicant FAQs (job openings fitting, application status, interview scheduling, policy clarifications) |
+| Requestor | Chief Innovation Officer |
+| Expected Benefits | Better candidate experience, reduced recruiter workload, 24/7 support |
+| Phase 1 Users | 1–2 people, HR team only, no scaling needed |
+| Tech Stack | JavaScript — 1 Service, run Locally |
+| Chat History | Remember last 5 Turns only |
+| Knowledge Base | Contoso recruiting & HR policy, first 5 pages |
+| Vector Database | Not used — File Search in Azure AI Foundry |
+| Authentication | API Key only (no Entra ID / az login) |
+| UI Theme | Blue + White, Clean Design |
+| Language | Thai, semi-formal |
+| Disclaimer | Permanent display at bottom of Chat |
+| Platform | Azure AI Foundry + Local Run |
+
+════════════════════════════════════════════════════════════════
+*Recorded by Napatsorn Techawat | May 14, 2025*
+*This document is for internal use within Contoso only.*
+════════════════════════════════════════════════════════════════
