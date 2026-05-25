@@ -45,7 +45,7 @@ A3.2) You can reschedule up to 2 times without penalty, as long as you give 24-h
 A4) I don't have information about Contoso's branch locations. Please check with hr@contoso.com for accurate details.
 ```
 
-![alt text](../images/image.png)
+![alt text](../images/agent_chat.png)
 
 Select agent mode and type the following
 
@@ -59,4 +59,4 @@ switch to GPT-5.4 and agent mode. Type the following prompt
 Please redesign UI to look like <path_to_image>
 ```
 Look at how our UI design look just like the image we chose:
-![alt text](../images/image.png)
+![alt text](../images/final_ui.png)
