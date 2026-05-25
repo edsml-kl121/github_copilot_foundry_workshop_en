@@ -1,6 +1,6 @@
 // Example 2 — Foundry Agent with the File Search tool.
 //
-// Uploads data/thai_leave_policy.pdf into a vector store, attaches it to an
+// Uploads data/Contoso_HR_Recruiting_Policy.pdf into a vector store, attaches it to an
 // assistant, asks a grounded question, then cleans up.
 //
 // Auth: API key (FOUNDRY_API_KEY in .env) — no az login required.
@@ -12,7 +12,7 @@ const path = require("path");
 const { AzureOpenAI } = require("openai");
 const { getConfig } = require("./_config");
 
-const PDF_PATH = path.resolve(__dirname, "..", "data", "thai_leave_policy.pdf");
+const PDF_PATH = path.resolve(__dirname, "..", "data", "Contoso_HR_Recruiting_Policy.pdf");
 // Assistants v2 with file search requires a preview API version
 const ASSISTANTS_API_VERSION = "2025-01-01-preview";
 
@@ -40,7 +40,7 @@ async function main() {
   console.log(`   file ID: ${file.id}`);
 
   console.log(">> Creating vector store…");
-  const vectorStore = await client.vectorStores.create({ name: "thai-leave-policy-vs" });
+  const vectorStore = await client.vectorStores.create({ name: "contoso-hr-recruiting-policy-vs" });
   console.log(`   vector store ID: ${vectorStore.id}`);
 
   console.log(">> Indexing PDF into vector store (polling until ready)…");
@@ -51,7 +51,7 @@ async function main() {
 
   console.log(">> Creating assistant…");
   const assistant = await client.beta.assistants.create({
-    name: "thai-leave-policy-agent",
+    name: "contoso-hr-recruiting-policy-agent",
     instructions:
       "You are an HR assistant. Answer ONLY using the attached Thai leave policy document. Cite the relevant section if possible.",
     model: cfg.agentDeployment,

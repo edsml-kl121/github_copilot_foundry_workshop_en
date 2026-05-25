@@ -71,7 +71,7 @@ The meeting agreed that the "Contoso HR Chat" theme will use blue and white colo
 
 **8. Language and Response Style**
 ───────────────────────────────────────────────────────────────
-The Bot will respond in Thai, but not 100% formal. It should have a friendly tone so that candidates feel comfortable asking questions and do not feel like they are talking to a cold system.
+The Bot will respond in English, but not 100% formal. It should have a friendly tone so that candidates feel comfortable asking questions and do not feel like they are talking to a cold system.
 
 **9. Disclaimer**
 ───────────────────────────────────────────────────────────────
@@ -113,7 +113,7 @@ The meeting made a clear resolution: **Use API Key (option b) only** for this Wo
 | Vector Database | Not used — File Search in Azure AI Foundry |
 | Authentication | API Key only (no Entra ID / az login) |
 | UI Theme | Blue + White, Clean Design |
-| Language | Thai, semi-formal |
+| Language | English, semi-formal |
 | Disclaimer | Permanent display at bottom of Chat |
 | Platform | Azure AI Foundry + Local Run |
 

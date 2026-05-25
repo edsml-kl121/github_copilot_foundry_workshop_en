@@ -8,7 +8,7 @@ workshop/
 ├── .env.template            # copy → .env, fill in your team's values
 ├── package.json
 ├── data/
-│   ├── thai_leave_policy.pdf  # used by example 2 (file search)
+│   ├── Contoso_HR_Recruiting_Policy.pdf  # used by example 2 (file search)
 │   └── image.png              # used by example 3 (vision)
 └── src/
     ├── _config.js          # loads .env + validates required vars
@@ -55,7 +55,7 @@ The deployment names default to `gpt-4o-mini` (chat/agent) and `gpt-4o` (vision)
 
 ```bash
 npm run example:1   # basic chat completion (user/assistant messages)
-npm run example:2   # agent + file search on data/thai_leave_policy.pdf
+npm run example:2   # agent + file search on data/Contoso_HR_Recruiting_Policy.pdf
 npm run example:3   # vision on data/image.png
 ```
 

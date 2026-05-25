@@ -8,9 +8,15 @@ The app uses Azure AI Foundry with File Search tool, source files are in /data. 
 
 For any Foundry API calls, follow the examples already in src/01_basic_chat.js, src/02_file_search.js, and src/03_image.js — don't invent your own patterns.
 ```
+This is the response of plan mode, fill in QA as required:
+
+![alt text](../images/plan1.png)
+
 Once done press `start implementation`
 
-![alt text](../images/start_implementation.png)
+![alt text](../images/plan2.png)
+
+![alt text](../images/implement1.png)
 
 ### Chatting to the chatbot
 
