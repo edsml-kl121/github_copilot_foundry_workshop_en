@@ -8,6 +8,12 @@ npm -v
 node -v
 ```
 
+Please also download python version 3.11 or 3.13. https://www.python.org/downloads/
+
+```
+python -v
+```
+
 Next duplicate `.env.template` file and rename it to `.env`. Then please replace the following environmental variable `FOUNDRY_ENDPOINT`, `FOUNDRY_API_KEY`, `FOUNDRY_PROJECT_ENDPOINT` provided by the instructor.
 
 
