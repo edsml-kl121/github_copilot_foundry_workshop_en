@@ -10,7 +10,7 @@ Please create a GitHub account and share it to the instructor prior event (Share
 
 Please log in to your GitHub Account and test if github codespaces work fine for this repository:
 
-Locate to https://github.com/edsml-kl121/github_copilot_foundry_workshop_2027 > code > `Create codespace on main`
+Locate to https://github.com/edsml-kl121/github_copilot_foundry_workshop_en > code > `Create codespace on main`
 
 ![Codespaces access check](../images/prereq-codespaces-access-check.png)
 
