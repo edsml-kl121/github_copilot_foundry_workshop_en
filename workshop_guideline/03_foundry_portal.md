@@ -89,13 +89,13 @@ Create an agent that finds information from uploaded documents using file search
 
    Enter the following in the **Instructions** section of Playground:
    ```
-You are an agent that responds based on File search registered in Tools.
+   You are an agent that responds based on File search registered in Tools.
 
-Important rules:
-1. Only answer based on uploaded file content
-2. If information is not in files, respond "I cannot find that information in the provided documents"
-3. Mention source file name in responses
-4. Use accurate citations
+   Important rules:
+   1. Only answer based on uploaded file content
+   2. If information is not in files, respond "I cannot find that information in the provided documents"
+   3. Mention source file name in responses
+   4. Use accurate citations
    ```
    
    Click the **Save** button to save.
@@ -121,11 +121,13 @@ Important rules:
 
    **Test with these questions in the Chat tab:**
 
+```
 Q1) Hi! Are there any AI-related positions currently open? Is remote work available?
 Q2) My application status shows 'On Hold' — what does that mean?
 Q3.1) Can I do the interview on a Saturday?
 Q3.2) And what if I need to reschedule? How many times can I do that?
 Q4) Does Contoso have a branch in Singapore?
+```
 
 ![FileSearchAgent test questions](../images/foundry-filesearch-test-questions.png)
 
