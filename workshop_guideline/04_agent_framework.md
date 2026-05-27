@@ -8,12 +8,12 @@ We will focus only LAB_3_multi_agent_workflow: `https://github.com/edsml-kl121/T
 
 Please go to the repository and create a codespace in cloud.
 
-![alt text](image-3.png)
+![Create Codespace](../images/agent-framework-create-codespace.png)
 
 
 Please fill in the first three environmental variable from the `.env.template`
 
-![alt text](image-4.png)
+![Environment variables in env template](../images/agent-framework-env-vars.png)
 
 Then, be sure to login with `az login` and `pip install -r requirement.txt`
 

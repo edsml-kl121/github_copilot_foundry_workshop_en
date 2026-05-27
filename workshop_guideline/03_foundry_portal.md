@@ -127,13 +127,13 @@ Q3.1) Can I do the interview on a Saturday?
 Q3.2) And what if I need to reschedule? How many times can I do that?
 Q4) Does Contoso have a branch in Singapore?
 
-![alt text](image-2.png)
+![FileSearchAgent test questions](../images/foundry-filesearch-test-questions.png)
 
 
 7. **Code**
 
 Please click on *code* area and click on open in VS Code. Change the question to the above question to test the api.
 
-![alt text](image.png)
+![Code tab open in VS Code](../images/foundry-code-tab-open-vscode.png)
 
-![alt text](image-1.png)
+![Code tab API test](../images/foundry-code-tab-api-test.png)
