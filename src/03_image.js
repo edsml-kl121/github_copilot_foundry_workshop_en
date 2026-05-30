@@ -1,4 +1,4 @@
-// Example 3 — Vision: send data/image.png to a Foundry-hosted multimodal
+// Example 3 — Vision: send images/vision-sample.png to a Foundry-hosted multimodal
 // model via Azure OpenAI chat completions.
 //
 // Run:  npm run example:3
@@ -9,7 +9,7 @@ const path = require("path");
 const { AzureOpenAI } = require("openai");
 const { getConfig } = require("./_config");
 
-const IMAGE_PATH = path.resolve(__dirname, "..", "data", "image.png");
+const IMAGE_PATH = path.resolve(__dirname, "..", "images", "vision-sample.png");
 
 function toDataUrl(filePath) {
   const ext = path.extname(filePath).toLowerCase();

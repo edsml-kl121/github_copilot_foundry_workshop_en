@@ -16,6 +16,21 @@ Locate to https://github.com/edsml-kl121/github_copilot_foundry_workshop_en > co
 
 Ensure there are no firewall blocking your access. If there are any firewall issues please let the instructor know before hand.
 
+You should received an email to join the hackathon which have been shared with you by the instructor. Please join the organization prior to the training.
+
+Now, head to VS code and install the GitHub Copilot Extension. (If you use GitHub Codespace, it should already have been installed for you)
+
+![alt text](../images/prereq-copilot-extension-install.png)
+
+Additionally, in VS Code please sign in to use GitHub Copilot Feature
+
+![alt text](../images/prereq-copilot-signin.png)
+
+Try chat with GitHub Copilot and you should see many models enabled for you.
+
+![alt text](../images/prereq-copilot-models-enabled.png)
+
+
 ***Backup Option****
 
 Install the latest version of Visual Studio Code and verify that it launches successfully. (Otherwise we will use code spaces)
